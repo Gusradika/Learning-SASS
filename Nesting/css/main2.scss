@@ -1,0 +1,46 @@
+.main {
+    background-color: lightblue;
+
+    .main-heading {
+        font-size: 2em;
+    }
+
+    .main-paragraph{
+        font-size: 1.4em;
+    }
+    
+}
+
+//Nesting Or
+.main , footer {
+    h1, p {
+        letter-spacing: 1px;
+    }
+}
+
+// Parent Selctor (&)
+// & mean you will give child identifier for its parent
+.main {
+    .container  &{
+        background-color: lightblue;
+    }
+    .main-heading{
+        font-size: 2em;
+    }
+
+    &:hover { // & will represent parent
+        background-color: salmon;
+    }
+}
+
+
+// Case
+// ingat & = .main (parent)
+.main {
+   & &-heading{ // masih mengincludkan nesting pada main.css
+        font-size: 2em;
+    }
+    &-paragraph{ // tanpa 2 & maka nesting akan hilang
+        font-size: 1.4em;
+    }
+}

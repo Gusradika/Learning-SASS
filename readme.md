@@ -22,3 +22,8 @@ https://sass-lang.com<br>
 - Can make custom functions<br>
 - Can be modified (Bootstrap / Materialize)<br>
 - Alot of company using SASS<br>
+
+<h2>Why not using SASS</h2>
+- Many SASS Features that already exist on vanilla css.
+- Not for mini Project
+- Styled Component / CSS in JS
