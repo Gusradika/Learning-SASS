@@ -1,0 +1,56 @@
+// CSS Variablees
+// Root adalah element yang berakar atau mendasar smua element memiliki root
+
+
+// Kelebihan CSS variable. adalah kita hanya harus mengganti :root untuk merubah warna
+// :root {
+//     --primary-color: #f4f1de;
+//     --secondary-color : #f2cc8f;
+//     --text-color: #e07a5f;
+// }
+
+// body{
+//     background-color: var(--primary-color);
+// }
+
+// h1{
+//     color: var(--text-color);
+// }
+
+// p{
+//      color: var(--text-color);
+// }
+
+
+// SASS variables
+// Penggunaan - _ itu sama.
+// SASS variables juga memiliki SCOPE
+
+$primary-color: #f4f1de;
+$secondary-color: #f2cc8f;
+$text-color: #e07a5f;
+
+body{
+    $primary-color2: #f4f1de !global;
+    background-color: $primary-color;
+}
+
+h1{
+    color: $text-color;
+}
+
+
+// MAP
+$alert-danger : red;
+$alert-success : green;
+$alert-warning : orange;
+
+$alert : (
+    'danger' : red,
+    'success' : green,
+    'warning' : orange,
+);
+
+h1{
+    color : map-get($alert, 'danger' );
+}
