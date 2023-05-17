@@ -1,3 +1,68 @@
 // Mixin bekerja seperti Function,
 // Terdapat 2 function @mixin dan @include
 
+//Mixin dalam Sass adalah sejenis fitur yang memungkinkan Anda untuk menulis 
+//sekumpulan aturan gaya (style rules) yang dapat digunakan kembali di seluruh proyek Anda. 
+//Mirip dengan fungsi dalam pemrograman, mixin memungkinkan Anda untuk menggabungkan 
+//dan memodifikasi aturan gaya yang sama di banyak tempat.
+
+// Simple Mixin
+
+@mixin inline-list(){
+    margin : 0;
+    padding : 0;
+    list-style: none;
+
+    li{
+        display: inline-block;
+    }
+}
+
+
+.header ul {
+    @include inline-list();
+    li {
+        background-color: black;
+        padding : 1em;
+        a{
+            color: white;
+        }
+    }
+}
+
+.footer ul {
+    @include inline-list();
+    li {
+        padding: 0.4em;
+        background-color: salmon;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Arguments pada mixin
+//Ingat mixin adalah Function
+
+@mixin flex-box($direction : row, $space : center){
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+.container {
+    @include flex-box(row-reverse);
+    width: 600px;
+    height: 400px;
+    background-color: #eaeaea;
+    .box {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        background-color: salmon;
+    }
+}
