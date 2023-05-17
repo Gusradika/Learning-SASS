@@ -1,0 +1,55 @@
+//Modules / Modular
+// Kita harus import _mixin.scss maka kita dapat menggunakan.
+// @import tetapi jangan menggunakan @import krn telah di adopsi
+// oleh CSS
+
+
+//Saat Mengimport hati2 dengan  variable urutannya harus benar untuk
+// mengurangi error variable not defined
+
+//gunakan @use sebagai pengganti @mixin
+//@use hanya bisa digunakan oleh DART SASS.
+// maka jika ingin menggunakan @use kita harus install SASS
+// Menggunakan Aplikasi.
+
+// @import 'mixin.scss';
+// @import 'header.scss';
+
+@use 'mixin.scss';
+@use 'header.scss';
+
+// kita harus compile dulu melalui terminal
+// sass css/main.scss css/main.css
+// sass (rubah [Path], ke [Path]) 
+
+
+.footer ul {
+    @include mixin.inline-list();
+    li {
+        padding: 0.4em;
+        background-color: salmon;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Arguments pada mixin
+//Ingat mixin adalah Function
+
+
+.container {
+    @include mixin.flex-box(row-reverse);
+    width: 600px;
+    height: 400px;
+    background-color: #eaeaea;
+    .box {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        background-color: salmon;
+    }
+}

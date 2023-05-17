@@ -1,0 +1,21 @@
+// File ini diawali _ (underscore) yang artiyna partial dan
+// tidak akan di render oleh extensi SASS
+
+
+
+@mixin inline-list(){
+    margin : 0;
+    padding : 0;
+    list-style: none;
+
+    li{
+        display: inline-block;
+    }
+}
+
+@mixin flex-box($direction : row, $space : center){
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+    flex-direction: $direction;
+}
