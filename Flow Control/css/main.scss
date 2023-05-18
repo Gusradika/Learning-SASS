@@ -1,4 +1,10 @@
 // Flow Control IF
+//Flow control dalam Sass digunakan untuk mengontrol alur eksekusi dalam kode Sass. Ini memberikan fleksibilitas tambahan dalam menentukan bagaimana gaya CSS dihasilkan berdasarkan logika dan kondisi tertentu. Beberapa kegunaan flow control dalam Sass termasuk:
+
+
+body{
+    min-height: 1000px;
+}
 
 @mixin profile-pic($size, $circle : false){
     width: $size;
@@ -40,4 +46,94 @@ $dark-text:#ddd;
 
 .nav {
     @include color-mode($light-mode : false);
+}
+
+
+// Else if
+
+@mixin triangle($size, $color, $direction){
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size;
+    @if($direction == up){
+        border-bottom-color: $color;
+    }@else if($direction == right){
+        border-left-color: $color;
+    }@else if($direction == down){
+        border-top-color: $color;
+    }@else{
+        border-right-color: $color;
+    }
+}
+
+.triangle {
+   @include triangle(2em,black , up);
+}
+
+//looping
+
+// yg biasa
+// .gradient {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     li{
+//         padding: 4px;
+//         background-color: salmon;
+//     }
+// }
+
+// FOR
+$color : salmon;
+.gradient {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @for $i from 1 to 11{
+        li:nth-child(#{$i}){
+            padding: 4px;
+            //darken / lighten
+            background-color: lighten($color, $i * 2%);
+        }
+    }
+}
+
+// WHILE
+$color2 : green;
+.gradient2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    $i : 1;
+    @while $i < 11{
+        li:nth-child(#{$i}){
+            padding: 4px;
+            //darken / lighten
+            background-color: lighten($color2, $i * 2%);
+        }
+        $i: $i + 1;
+    }
+}
+
+// each
+$social-color : (
+    "youtube" : red,
+    "facebook" : blue,
+    "twitter" : lightblue,
+    "instagram" : #ffbf34,
+
+);
+
+.gradient3 {
+    font-size: 2em;
+    font-family: arial;
+    font-weight: bold;
+    @each $social, $color in $social-color{
+        .#{$social}{
+            color : $color;
+        }
+    }
 }

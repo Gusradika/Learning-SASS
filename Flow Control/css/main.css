@@ -1,3 +1,7 @@
+body {
+  min-height: 1000px;
+}
+
 .circle-profile {
   width: 200px;
   height: 200px;
@@ -16,4 +20,124 @@
 .nav {
   background-color: #999;
   color: #ddd;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2em;
+  border-bottom-color: black;
+}
+
+.gradient {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gradient li:nth-child(1) {
+  padding: 4px;
+  background-color: #fa897c;
+}
+.gradient li:nth-child(2) {
+  padding: 4px;
+  background-color: #fb9286;
+}
+.gradient li:nth-child(3) {
+  padding: 4px;
+  background-color: #fb9b90;
+}
+.gradient li:nth-child(4) {
+  padding: 4px;
+  background-color: #fba399;
+}
+.gradient li:nth-child(5) {
+  padding: 4px;
+  background-color: #fcaca3;
+}
+.gradient li:nth-child(6) {
+  padding: 4px;
+  background-color: #fcb5ad;
+}
+.gradient li:nth-child(7) {
+  padding: 4px;
+  background-color: #fcbeb7;
+}
+.gradient li:nth-child(8) {
+  padding: 4px;
+  background-color: #fdc7c1;
+}
+.gradient li:nth-child(9) {
+  padding: 4px;
+  background-color: #fdd0cb;
+}
+.gradient li:nth-child(10) {
+  padding: 4px;
+  background-color: #fdd9d5;
+}
+
+.gradient2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gradient2 li:nth-child(1) {
+  padding: 4px;
+  background-color: #008a00;
+}
+.gradient2 li:nth-child(2) {
+  padding: 4px;
+  background-color: #009400;
+}
+.gradient2 li:nth-child(3) {
+  padding: 4px;
+  background-color: #009f00;
+}
+.gradient2 li:nth-child(4) {
+  padding: 4px;
+  background-color: #00a900;
+}
+.gradient2 li:nth-child(5) {
+  padding: 4px;
+  background-color: #00b300;
+}
+.gradient2 li:nth-child(6) {
+  padding: 4px;
+  background-color: #00bd00;
+}
+.gradient2 li:nth-child(7) {
+  padding: 4px;
+  background-color: #00c700;
+}
+.gradient2 li:nth-child(8) {
+  padding: 4px;
+  background-color: #00d200;
+}
+.gradient2 li:nth-child(9) {
+  padding: 4px;
+  background-color: #00dc00;
+}
+.gradient2 li:nth-child(10) {
+  padding: 4px;
+  background-color: #00e600;
+}
+
+.gradient3 {
+  font-size: 2em;
+  font-family: arial;
+  font-weight: bold;
+}
+.gradient3 .youtube {
+  color: red;
+}
+.gradient3 .facebook {
+  color: blue;
+}
+.gradient3 .twitter {
+  color: lightblue;
+}
+.gradient3 .instagram {
+  color: #ffbf34;
 }/*# sourceMappingURL=main.css.map */
