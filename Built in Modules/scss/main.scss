@@ -1,0 +1,69 @@
+// Base 
+
+$warna-dasar : salmon;
+
+h1{
+    color: $warna-dasar;
+    font-family: arial;
+
+}
+
+
+// built in modules : color
+// adjust-color()
+
+h1 {
+    color: adjust-color($color: $warna-dasar, $green : 100, $blue : 100);
+}
+
+// Adjust-hue()
+
+
+// Complement($color) // Warna bersebrangan
+h1 {
+    color: complement($color: $warna-dasar);
+}
+
+// darken() // pergelap
+h1 {
+    color: darken($warna-dasar, 20%);
+}
+
+// lighten() // perterang
+h1{
+    color: lighten($warna-dasar, 10%);
+}
+
+// saturate()
+h1 {
+    color: satruate($warna-dasar, 50%);
+}
+
+// desaturate()
+h1 {
+    color: desaturate($warna-dasar, 100%);
+}
+
+// grayscale()
+h1{
+    color: grayscale($warna-dasar);
+}
+
+// mix($color1, $color2, weight : 50%); // default value 50% di ambil dari variable pertama. maka 20% di masukan ke var 1
+
+h1 {
+    color: mix($warna-dasar, blue, 80%);
+}
+
+
+// fade-in($color, $amount) // merubah color yang transparent menjadi solid
+
+h1{
+    color: fade-in($warna-dasar,10);
+}
+
+// fade-out ($color, $amount) // merubah color yang transparent menjadi transparent
+
+h1{
+    color: fade-out($warna-dasar, 1);
+}
